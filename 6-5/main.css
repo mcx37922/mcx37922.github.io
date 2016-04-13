@@ -26,6 +26,11 @@ div.right {
     float: right;
 }
 
+div.main {
+    width: 95%;
+    height: auto;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: "";
