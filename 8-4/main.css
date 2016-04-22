@@ -7,6 +7,7 @@ body {
 
 div.main {
     width: 894px;
+    height: 1386px;
     background-color: #fff;
     /*margin-left=margin-right=auto时，该元素会在其父元素中居中*/
     margin: 0 auto;
@@ -45,7 +46,7 @@ div.main {
 
 .focus {
     width: 100%;
-    height: 500px;
+    height: 320px;
     margin-top: 35px;
     font-family: 微软雅黑;
 }
@@ -93,8 +94,251 @@ p.an-num {
     font-size: 55px;
     color: #cc8091;
     float: left;
+    padding-right: 10px;
 }
 
-div.focus p.last-desc {
-    color: #231815;
+p.css{
+   font-size: 21px;
+   color: #cc8091; 
+   padding-top: 18px;
+}
+   
+ p.last-desc{
+    font-size: 12px;
+    color: #BFBFBF;
+}
+.intro{
+    width: 641px;
+    height: 230px;
+    font-size: 12px;
+    font-family: 宋体;
+    color: #767777;
+    line-height: 16px;
+}
+.intro-left{
+    width: 228px;
+    float: left;
+    padding-right: 20px;
+}
+.what{
+    font-size: 16px;
+    font-family: 微软雅黑;
+    color: #418c59;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
+.intro-middle{
+    width: 208px;
+    float: left;
+    padding-right: 20px;
+}
+.when{
+    font-size: 16px;
+    font-family: 微软雅黑;
+    color: #d2994f;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
+.intro-middle p:last-child{
+    opacity: 0.7;
+}
+.intro-right{
+    width: 134px;
+    float: left;
+}
+.irt p:last-child{
+    line-height: 20px;
+    font-family: 微软雅黑;
+    opacity: 0.7;
+}
+.how{
+    font-size: 16px;
+    font-family: 微软雅黑;
+    color: #cc7680;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
+
+.irb{
+    margin-top: 40px;
+}
+.irb span{
+    font-size: 12px;
+    color: #cd4a48;
+    font-family: 微软雅黑;
+    font-style: oblique;
+    opacity: 0.7;
+}
+.feature{
+    top: 60px;
+}
+.left{
+    width: 415px;
+    float: left;
+    padding-top: 20px;
+}
+.left-top{
+    border-bottom: 2px solid #11456b;
+}
+.left-top span{
+    font-size: 72px;
+    color: #f5e327;
+    font-weight: bold;
+    font-style: oblique;
+    padding-right: 20px;
+    padding-bottom: 16px;
+    
+}
+.left-top p {
+    font-size: 42px;
+    color: #11456b;
+    font-family: 黑体;
+    font-weight: bold;
+    line-height: 40px;
+}
+.left-top p:last-child{
+    font-size: 33px;
+    padding-bottom: 5px;
+}
+.left-bottom{
+    padding: 10px 0px;
+    margin-top: 20px;
+}
+.left-bottom img{
+    width: 165px;
+    height: 285px;
+    float: right;
+    padding: 20px 0px 20px 20px;
+}
+.left-bottom p{
+    font-size: 12px;
+    color: #767777;
+    font-family: 宋体;
+    line-height: 16px;
+}
+.left-bottom p:first-letter{
+    font-size: 70px;
+    color: #f5e327;
+    font-family: 微软雅黑;
+    float: left;
+}
+.right{
+    width: 458px;
+    float: right;
+}
+
+.right-top img{
+    background-image: url(img/feature2.jpg);
+    width: 458px;
+    height: 275px;
+}
+.right-bottom{
+    width: 458px;
+    height: 318px;
+    float: right;
+    background-color:#eeedd6;
+    margin-top: 30px;
+    position: relative;
+}
+
+.r-text-1 ul {
+    padding-left: 50px;
+    list-style-image: url(img/feature3.png);
+    padding-top: 30px;
+    padding-right: 10px;
+   }
+.r-text-1 ul li{
+    width: 410px;
+    font-size: 16px;
+    color: #5a5b5b;
+    font-family: 宋体;
+    text-align: left;
+    line-height: 20px;
+}
+.r-text-1 ul li span{
+    font-size: 12px;
+    font-style: oblique;
+    text-align: right;
+}
+.r-text-2 {
+    width: 260px;
+    height: 160px;
+    background: #d45d5c;
+    color: #fff;
+    float: left;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.num-left{
+    float: left;
+    font-size: 110px;
+    font-family: 黑体;
+    border-right: 2px  solid;
+    height: 86px;
+    line-height: 86px;
+    margin-top: 33px;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+.hello{
+    text-align:left;
+    width: 160px;
+    float: left;
+    margin-top: 15%;
+}
+.one{
+    font-size: 21px;
+    font-family: 黑体;
+    font-style: oblique;
+    line-height: 24px;
+}
+.num-right{
+    font-size: 12px;
+    font-family: 黑体;
+    line-height: 10px;
+}
+.r-text-3 {
+    width: 180px;
+    height: 160px;
+    float:right;
+    font-size: 14px;
+    color: #5a5b5b;
+    font-family: 黑体;
+    font-style: oblique;
+    line-height: 16px;
+    margin-top:80px; 
+}
+.r-text-3 p{
+    text-indent: 3.3em;
+    bottom: 0;
+}
+ .r-text-3 p span{
+    font-size: 72px;
+    color: #d45d5c;
+    position: absolute;
+    font-style: normal;
+ }
+ .r-text-3 span:first-child{
+    right: 148px;
+    bottom: 112px;
+ }
+ .r-text-3 span:last-child{
+    bottom: 18px;
+    right: -34px;
+
+ }
+.foot {
+    width: 892px;
+    height: 14px;
+    color: #d45d5c;
+    font-size: 12px;
+    text-align: right;
+    float:right;
+    padding-top: 2px;
+     border-top: 1px solid #938e8c;
+     margin-top: 40px;
 }
