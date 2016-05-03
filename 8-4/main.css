@@ -83,11 +83,16 @@ div.main {
 }
 
 .focus-num p.num {
+    width: 220px;
     font-size: 116px;
     font-style: italic;
     color: #75b86b;
-    font-weight: bold;
+    letter-spacing: -5px;
     margin-top: 20px;
+    overflow: hidden;
+    left: -22px;
+    position: relative;
+
 }
 
 p.an-num {
@@ -215,15 +220,25 @@ p.css{
 }
 .left-bottom p{
     font-size: 12px;
+    text-indent: 2em;
     color: #767777;
     font-family: 宋体;
     line-height: 16px;
 }
-.left-bottom p:first-letter{
-    font-size: 70px;
+.left-bottom p:first-child{
+    text-indent: 0;
+    /*font-size: 70px;
     color: #f5e327;
     font-family: 微软雅黑;
+    float: left;*/
+}
+.left-bottom span{
+    font-size: 70px;
+    color: #f5e327;
+    font-family: "微软雅黑";
     float: left;
+    line-height: 70px;
+    margin: 0 4px 4px 0;
 }
 .right{
     width: 458px;
@@ -336,9 +351,10 @@ p.css{
     height: 14px;
     color: #d45d5c;
     font-size: 12px;
+    font-family: "黑体";
     text-align: right;
     float:right;
     padding-top: 2px;
-     border-top: 1px solid #938e8c;
-     margin-top: 40px;
+    border-top: 1px solid #938e8c;
+    margin-top: 40px;
 }
