@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>jQuery选择符练习</title>
+	 <script src=""></script>
+	 <style>
+	 .title{
+	 	font-size:20px;
+	 }
+	 </style>
+</head>
+<body>
+	<h1>jQuery选择符</h1>
+	<h1 class="title">jQuery选择符</h1>
+	<p>广告学专业</p>
+	<p>新闻学专业</p>
+	<p>广电专业</p>
+	<script>
+		$(document).ready(
+			function() {
+				$("h1").css('color',"red");
+				$('.title').addClass('title');
+
+			
+		});
+	</script>
+</body>
+</html>
