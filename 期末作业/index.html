@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>fullPage.js古风乐器页面演示_dowebok</title>
+<link rel="stylesheet" href="http://www.dowebok.com/demo/2014/77/css/jquery.fullPage.css">
+<style>
+	*{margin: 0;padding: 0;}
+	body{font: 16px/18 "Microsoft Yahei",verdana;}
+
+	/*右侧导航条*/
+	#fullPage-nav { _display: none; font-size: 12px;}
+	#fullPage-nav li { width: 90px; height: 21px; margin: 10px 0 0; vertical-align: middle;}
+    #fullPage-nav li a { float: right; width: 21px; height: 21px; color: #8F9DA4; text-decoration: none; text-align: right; background: url(image/dot.png) 5px 5px no-repeat;}
+    #fullPage-nav li .active { background-position: 0 bottom;}
+    #fullPage-nav span { display: none;}
+   .fullPage-tooltip { float: left; top: 0; margin-right: 5px; font: 12px "Microsoft Yahei"; color: #8F9DA4; line-height: 21px;}
+   .section { position: relative; overflow: hidden;}
+.section .bg { position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.section .bg img { display: block; width: 100%; height: 100%;}
+
+.bg11 { position: absolute; bottom: -510px; width: 100%; height: 380px; background: url(img/bg11.png) 50% 0 no-repeat; opacity: 0; transition: all 1.9s; bottom: 110px\0;}
+.bg12 { position: absolute; bottom: -392px; width: 100%; height: 392px; background: url(img/bg12.png) 50% 0 no-repeat; opacity: 0; transition: all 1.7s; bottom: 90px\0;}
+.bg13 { position: absolute; bottom: -390px; width: 100%; height: 377px; background: url(img/bg13.png) 50% 0 no-repeat; transition: all 1s;}
+.group { position: absolute; width: 554px; height: 176px; left: 50%; top: 3%; margin: 0 0 0 -277px; text-indent: -9999px; background-image: url(img/slogan.png); opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+.p11 { position: absolute; left: 57%; top: 30%; width: 300px;line-height: 1.5; margin: 0 0 0 -280px; font-size: 14px; color: #a58745; opacity: 0; transition: all 0.5s;}
+.p11-1 { position: absolute; left: 10%; top: 30%; width: 300px;line-height: 1.5; margin: 0 0 0 -80px; font-size: 14px; color: #ae5e28; opacity: 0; transition: all 0.5s;}
+.p11-2 { position: absolute; left: 80%; top: 30%; width: 300px;line-height: 1.5; margin: 0 0 0 -80px; font-size: 14px; color: #d47929; opacity: 0; transition: all 0.5s;}
+.address { position: absolute; left: 5%; top: -26px; width: 375px; height: 26px; margin-left: -187px; background-image: url(img/logo.png); transition: all 1s;}
+.address { float: left; height: 26px; text-indent: -9999px;}
+.taobao { float: left; width: 107px;}
+.jd { float: left;width: 108px; margin-left: 23px;}
+
+.bg23 { position: absolute; left: 21%; bottom: 0; width: 819px; height: 617px; margin-left: -400px; background: url(img/bg23.png) 50% 0 no-repeat; transition: all 1s;  bottom: -10%;}
+.section strong { position: absolute; left: 52%; top: 12%; z-index: 10; width: 512px; height: 45px; margin-left: -256px; font-size: 24px; font-weight: 500; color: #748A9E; opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+.section h3 { position: absolute; left: 50%; top: 15%; z-index: 10; width: 512px; height: 45px; margin-left: -256px; margin-top: 60px; text-indent: -9999px; background-repeat: no-repeat; opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+.p1 { position: absolute; left: 53%; top: 47%; width: 450px;line-height: 1.5;text-indent: 2em; margin-left: -255px; margin-top: 130px; font-size: 16px; color: #727F8C; opacity: 0; transition: all 1s;}
+
+.section2 h3 { left: 72%;top: 8%;background-image: url(img/t2.png);}
+.section3 h3 { left: 88%;top: 53%;height: 180px; background-image: url(img/t3.png);}
+.section3 strong{left: 64%;top: -25%;}
+.section4 h3 { left: 20%;top:50%;height: 180px; background-image: url(img/t4.png);}
+.section4 strong{left: 54%;top: -5%;}
+.section4 .p1{left: 52%;top: 20%;color: #503657;line-height: 1.5em;width: 350px;}
+.section5 h3 {left:650px;top: 48%;height: 180px; background-image: url(img/t5.png);}
+.section5 strong{left: 850px;top: -20%;}
+
+.bg33 { position: absolute; left: 5%; top:5px; width: 710px; height: 620px; margin-left: 50%; background: url(img/bg33.png) 0 0 no-repeat; opacity: 0; transition: all 1s;}
+.p3 { position: absolute; width: 350px;color: #3f688d; left: 80%; top: -150px;line-height: 1.5;text-indent: 2em; margin-top: 250px; margin-left: -100%; font-size: 16px; opacity: 0; transition: all 1s;}
+
+.bg41 { position: absolute; bottom: -372px; width: 100%; height: 372px; background: url(image/bg41.png) 50% 0 no-repeat; transition: all 1s;}
+.bg42 { position: absolute; bottom: -560px; left: 30%; width: 100%; height: 860px; background: url(img/bg42.png) 40% 0 no-repeat; transition: all 1s;}
+.bg43 { position: absolute; bottom: -449px; width: 100%; height: 449px; margin-bottom: -130px; background: url(image/bg43.png) 50% 0 no-repeat; transition: all 1s;}
+
+.bg51 { position: absolute; z-index: 1; width: 208px; left: 50%; bottom: 20%; padding-top: 210px; color: #fff;}
+.p4 { position: absolute; width: 350px;color: #496781;padding-left: 420px; left: 700px; top: -145px;line-height: 1.5;text-indent: 2em; margin-top: 250px; margin-left: -100%; font-size: 16px; opacity: 0; transition: all 1s;}
+.section5 p { font-size: 14px;}
+.bg51 {left: 36%;top: -4px;width: 750px;height: 550px;  background: url(img/bg51.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+
+.bg61 { position: absolute; width: 100%; height: 100%; background: url(img/bg61.png) 45% 25% no-repeat;opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+.bg62 { position: absolute; width: 100%; height: 50px;top: 48%; background: url(img/bg62.png) 43% 0 no-repeat; opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 2s;}
+
+.copyright { position: absolute; left: 0; bottom: -50px; width: 100%; text-align: center; font-size: 0;}
+.copyright a, .copyright span { margin: 0 7px; font-size: 12px; color: #a0a0a0;}
+
+/* CSS3过度及动画 */
+.active strong, .active h3 { opacity: 1; -webkit-transform:scale(1, 1); transform:scale(1, 1); transition-delay: 0.7s;}
+.active .p1 { opacity: 1; transition-delay: 1.7s;}
+
+.active .bg11 { bottom: 210px; opacity: 1; transition-delay: 0.7s; }
+.active .bg12 { bottom: 90px; opacity: 1; transition-delay: 0.7s; }
+.active .bg13 { bottom: 5px; opacity: 1; transition-delay: 0.7s; }
+.active .group { opacity: 1; -webkit-transform:scale(1, 1); transform:scale(1, 1); transition-delay: 0.7s;}
+.active .address { top: 15px; transition-delay: 0.7s;}
+.active .p11 { opacity: 1; transition-duration: 1s; transition-delay: 2s;}
+.active .p11-1 { opacity: 1; transition-duration: 1s; transition-delay: 2s;}
+.active .p11-2 { opacity: 1; transition-duration: 1s; transition-delay: 2s;}
+
+.active .bg23 { bottom: 0; transition-delay: 0.7s;}
+
+.active .p3 { margin-left: -480px; opacity: 1; transition-delay: 0.7s;}
+.active .bg33 { margin-left: -120px; opacity: 1; transition-delay: 0.7s;}
+
+.active .bg41 { top: 5%; transition-delay: 0.7s;}
+.active .bg42 { bottom: -100px; transition-delay: 1.1s;}
+.active .bg43 { bottom: 15%; transition-delay: 0.9s;}
+
+.active .bg51 { margin-left: -551px; opacity: 1; transition-delay: 0.7s;}
+.active .p4 { margin-left: -551px; opacity: 1; transition-delay: 0.7s;}
+.active .bg52 { margin-left: -253px; opacity: 1; transition-delay: 0.7s;}
+.active .bg53 { margin-left: 45px; opacity: 1; transition-delay: 0.7s;}
+.active .bg54 { margin-left: 345px; opacity: 1; transition-delay: 0.7s;}
+
+.active .bg61, .active .bg62 { opacity: 1; -webkit-transform:scale(1, 1); transform:scale(1, 1); transition-delay: 0.7s;}
+
+/* for lt ie 10 */
+.ltie10 strong, .ltie10 h3 { opacity: 1; transform:scale(1, 1); transition-delay: 0.7s;}
+.ltie10 .p1 { opacity: 1; transition-delay: 1.7s;}
+
+.ltie10 .bg11 { bottom: 210px; opacity: 1; transition-delay: 0.7s; }
+.ltie10 .bg12 { bottom: 90px; opacity: 1; transition-delay: 0.7s; }
+.ltie10 .bg13 { bottom: 5px; opacity: 1; transition-delay: 0.7s; }
+.ltie10 .group { opacity: 1; transform:scale(1, 1); transition-delay: 0.7s;}
+.ltie10 .address { top: 15px; transition-delay: 0.7s;}
+.ltie10 .p11 { opacity: 1; transition-duration: 1s; transition-delay: 2s;}
+.ltie10 .p11-1 { opacity: 1; transition-duration: 1s; transition-delay: 2s;}
+.ltie10 .p11-2 { opacity: 1; transition-duration: 1s; transition-delay: 2s;}
+
+.ltie10 .bg21 { opacity: 1; margin-left: -608px; transition-delay: 0.7s;}
+.ltie10 .bg23 { bottom: 0; transition-delay: 0.7s;}
+.ltie10 .bg22 { margin-left: -280px; opacity: 1; transition-delay: 0.7s;}
+
+.ltie10 .p3 { margin-left: -480px; opacity: 1; transition-delay: 0.7s;}
+.ltie10 .bg31, .ltie10 .bg32 { opacity: 1; transition-delay: 1s;}
+.ltie10 .bg33 { margin-left: -120px; opacity: 1; transition-delay: 0.7s;}
+
+.ltie10 .bg41 { bottom: 15%; transition-delay: 0.7s;}
+.ltie10 .bg42 { bottom: -100px; transition-delay: 1.1s;}
+.ltie10 .bg43 { bottom: 15%; transition-delay: 0.9s;}
+
+.ltie10 .bg51 { margin-left: -551px; opacity: 1; transition-delay: 0.7s;}
+.ltie10 .p4 { margin-left: -551px; opacity: 1; transition-delay: 0.7s;}
+
+.ltie10 .bg61, .ltie10 .bg62 { opacity: 1; transform:scale(1, 1); transition-delay: 0.7s;}
+</style>
+<script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://www.dowebok.com/demo/2014/77/js/jquery.fullPage.min.js"></script>
+<script>
+	$(function(){
+	if($.browser.msie && $.browser.version < 10){
+		$('body').addClass('ltie10');
+	}
+	$.fn.fullpage({
+		verticalCentered: false,
+		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+		navigation: true,
+		navigationTooltips: ['首页', '阮', '古筝', '笛', '尾页']
+	});
+});
+</script>	
+</head>
+<body>
+<div class="section section1">
+	<div class="bg"><img src="img/背景1.jpg" alt=""></div>
+	<div class="bg11"></div>
+	<div class="bg12"></div>
+	<div class="bg13"></div>
+	<div class="address">
+		<a class="taobao" href="http://www.dowebok.com/">淘宝</a>
+		<a class="jd" href="http://www.dowebok.com/">京东</a>
+	</div>
+	<div class="group">
+		<h1><a href="http://www.dowebok.com/">古风粹</a></h1>
+		<h2>醉人间</h2>
+	</div>
+	<p class="p11">长河落日映晚霞，欢歌笑语载渔舟。湖光山色之间万顷碧波，悠然自得渔人荡漾归舟。此番山水诗意，跃然筝上，萦绕指尖，泠泠入耳。不觉间轻歌浅唱，不如归。</p>
+	<p class="p11-1">千花百草。送得春归了。拾蕊人稀红渐少。正好一枝娇艳，叶底杏青梅小。小琼闲抱琵琶。雪香微透轻纱。当筵独站韶华。</p>
+	<p class="p11-2">掩抑复凄清，非琴而是筝。还弹乐府曲，别占阮家名。古调何人识，衫闻满座惊。</p>
+</div>
+
+<div class="section section2">
+	<div class="bg"><img src="img/背景2.jpg" alt=""></div>
+	<div class="bg21"></div>
+	<div class="bg22"></div>
+	<div class="bg23"></div>
+	<strong>[阮·清明悦耳]</strong>
+	<h3>音色纯厚圆润，如珠落玉盘</h3>
+	<p class="p1">阮是一种汉族传统乐器，阮咸的简称。相传西晋阮咸善弹此乐器，因而得名。四弦有柱，形似月琴。始于宋代，元代时在民间广泛流传，成为人们喜爱的弹拨乐器，有了广阔的音域和丰富的表现力。</p>
+</div>
+
+<div class="section section3">
+	<div class="bg"><img src="img/背景3.jpg" alt=""></div>
+	<div class="bg31"></div>
+	<div class="bg32"></div>
+	<div class="bg33"></div>
+	<strong>[筝·清亮脆律]</strong>
+	<h3>秦筝吐绝调，玉柱扬清曲，弦依高和断，声随妙指续。徒闻音绕梁，宁知颜如玉。</h3>
+    <p class="p3">古筝是我国独特的、重要的民族乐器之一。它的音色优美，音域宽广、演奏技巧丰富，具有相当的表现力，因此它深受广大人民群众的喜爱。</p>
+</div>
+
+<div class="section section4">
+	<div class="bg"><img src="img/背景4.jpg" alt=""></div>
+	<div class="bg41"></div>
+	<div class="bg42"></div>
+	<div class="bg43"></div>
+	<strong>[琵琶·刚柔并济]</strong>
+	<h3>大弦嘈嘈如急雨，小弦切切如私语，嘈嘈切切错杂弹，大珠小珠落玉盘。</h3>
+	<p class="p1">琵琶被称为“民乐之王”、“弹拨乐器之王”、“弹拨乐器首座”，拨弦类弦鸣乐器。琵琶是由“头”与“身”构成，头部包括弦槽、弦轴、山口等。身部包括相位、品位、音箱、覆手等部分。</p>
+</div>
+
+<div class="section section5">
+	<div class="bg"><img src="img/背景5.jpg" alt=""></div>
+	<div class="bg51">
+	<strong>[笛·悠扬婉转]</strong>
+	<h3>长亭外,古道边,芳草碧连天, 晓风拂柳笛声残, 夕阳山外山。
+　天之涯,地之角,如交半零落, 一瓢浊酒尽余欢,今宵别梦寒。</h3>
+		<p class="p4">笛子，又称竹笛，中国传统乐器。笛子是中国广为流传的吹奏乐器，因为是用天然竹材制成，所以也称为"竹笛"。笛子的表现力非常丰富，它既能演奏悠长、高亢的旋律，又能表现辽阔、宽广的情调，同时也可以奏出欢快华丽的舞曲和婉转优美的小调。</p>
+	</div>
+</div>
+
+<div class="section section6">
+	<div class="bg"><img src="img/背景6.jpg" alt=""></div>
+	<div class="bg61"></div>
+	<div class="bg62"></div>
+	<p class="copyright">
+		<a href="javascript:">关于古风乐器</a>
+		<a href="javascript:">淘宝</a>
+		<a href="javascript:">京东</a>
+		<a href="javascript:">客户服务</a>
+		<a href="javascript:">隐私政策</a>
+		<span>|</span>
+		<span>优米仔版权所有 © 2016 </span>
+	</p>
+</div>
+</body> 

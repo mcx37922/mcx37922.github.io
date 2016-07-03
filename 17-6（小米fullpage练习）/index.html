@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>fullPage.js — 小米5_dowebok</title>
+<link rel="stylesheet" href="http://www.dowebok.com/demo/2014/77/css/jquery.fullPage.css">
+<style>
+body{color:#333;font-family:"Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif}
+h1{font-size:5em;font-family:arial,helvetica;margin:0;padding:0}
+h2{font-size:2em;margin:0 0 18px 0;font-family:arial,helvetica}
+img{-webkit-transition:all 0.7s ease-out;-moz-transition:all 0.7s ease-out;-o-transition:all 0.7s ease-out;transition:all 0.7s ease-out}
+.section{text-align:center;overflow:hidden}
+.wrap{width:1180px;height:100%;margin-left:auto;margin-right:auto;position:relative}
+.box{text-align:left;color:#808080;font-size:1.2em;line-height:1.6em}
+#section0{padding:60px 0}
+#section0 img{height:100%;margin:40px 0 0 440px}
+#section0 .box{position:absolute;top:60%;left:10%;margin-top:-180px;margin-left:10px;width:410px;z-index:1}
+#section1 img{position:absolute;left:40px;top:100px}
+#section1 .box{position:absolute;top:50%;left:70%;margin-top:-192px;margin-left:110px;width:200px;z-index:1}
+#section1 .imgsContainer{display:block;position:absolute;z-index:1;top:42%;left:58%;margin-top:-250px;margin-left:-747px;width:800px;height:650px}
+#section1 img{height:60%}
+@media all and (min-width:620px) and (max-width:800px){#section1 .imgsContainer{margin-top:-278px;margin-left:-685px;width:647px;height:563px}
+}@media all and (max-width:620px){#section1 .imgsContainer{margin-top:-208px;margin-left:-516px;width:534px;height:464px}
+}
+#gold-2{z-index:12}
+#gold-2.active{-webkit-transform:translate3d(-140px,0px,0px);-moz-transform:translate3d(-140px,0px,0px);-ms-transform:translate3d(-140px,0px,0px);transform:translate3d(-140px,0px,0px)}
+#gold-1{z-index:10;left:230px}
+#gold-1.active{-webkit-transform:translate3d(220px,0px,0px);-moz-transform:translate3d(220px,0px,0px);-ms-transform:translate3d(220px,0px,0px);transform:translate3d(220px,0px,0px)}    
+#all-1{z-index:11;left:140px}
+#all-1.active{-webkit-transform:translate3d(448px,0px,0px);-moz-transform:translate3d(448px,0px,0px);-ms-transform:translate3d(448px,0px,0px);transform:translate3d(448px,0px,0px)}
+#section2 img{position:absolute}
+#section2 .imgsContainer,#staticImg .imgsContainer,#section3 .imgsContainer{position:absolute;z-index:1;left:50%;display:block;margin-top:-288px;margin-left:-636px;width:0;height:0;-webkit-transition:all 1.2s ease-in-out;-moz-transition:all 1.2s ease-in-out;-o-transition:all 1.2s ease-in-out;transition:all 1.2s ease-in-out}
+#section2.moveUp .imgsContainer{top:50%}
+#section2.moveDown .imgsContainer,#staticImg .imgsContainer{top:90%}
+#section2.active .imgsContainer{top:50%}
+#section2 .box{top:22%;left:50%;position:absolute;width:582px}
+#black-1{top:-35px;left:-290px}
+#black-2{top:-220px;left:106px}
+#white-1{top:320px;left:500px}
+#white{left:106px;position:absolute}
+#staticImg{display:block;position:absolute;z-index:1;top:200%;left:0;width:100%;min-width:980px;height:100%;-webkit-transition:all 0.7s ease-out;-moz-transition:all 0.7s ease-out;-o-transition:all 0.7s ease-out;transition:all 0.7s ease-out}
+#staticImg.moveDown{top:300%}
+#staticImg.moveDown .imgsContainer{top:50%}
+#staticImg.moveDown img{top:160px}
+#staticImg.active .imgsContainer{top:50%}
+#staticImg.active img{top:287px}
+#section3 .imgsContainer{top:50%}
+#section3 img{top:200px;left:455px;position:absolute}
+#section3 .box{text-align:center;margin:10% 0 0 0}
+#infoMenu.whiteLinks li:nth-child(1) a,#infoMenu.whiteLinks li:nth-child(2) a,#infoMenu.whiteLinks li:nth-child(3) a{color:#fff}
+#infoMenu{font-family:arial,helvetica}
+.fullPage-tooltip{color:#AAA}
+#fullPage-nav span,.fullPage-slidesNav span{border-color:#AAA}
+#fullPage-nav li .active span,.fullPage-slidesNav .active span{background:#AAA}
+</style>
+<script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://www.dowebok.com/demo/2014/77/js/jquery.fullPage.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.fn.fullpage({
+			'verticalCentered': false,
+			'anchors': ['page1', 'page2', 'page3', 'page4'],
+			'css3': true,
+			'slidesColor': ['#efece5', '#f0f2f4', '#f0f2f4', '#f0f2f4'],
+			'navigation': true,
+			'navigationPosition': 'right',
+			'navigationTooltips': ['主页', '屏幕', '黑科技', '款式'],
+    
+
+			
+			
+			'afterLoad': function(anchorLink, index){
+				if(index == 2){
+					$('#gold-2, #gold-1, #all-1').addClass('active');
+				}
+				$('#infoMenu').toggleClass('whiteLinks', index ==4);
+				
+			},
+			
+			'onLeave': function(index, direction){
+				if (index == 3 && direction == 'down'){
+					$('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
+				}
+				else if(index == 3 && direction == 'up'){
+					$('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
+				}
+				
+				$('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
+				$('#staticImg').toggleClass('moveDown', index == 3 && direction == 'down');	
+			},
+			
+			afterRender: function(){
+				$('#infoMenu').appendTo('body');
+				
+				$('#githubLink, .twitter-share-button').appendTo('body');
+			}
+
+		});
+	});
+</script>
+</head>
+
+<body>
+
+<div id="staticImg">
+	<div class="imgsContainer">
+		<img src="image/2-1.png" alt="小米" id="white" />
+	</div>
+</div>
+
+<div class="section " id="section0">
+	<img src="image/4.png" alt="all-2" />
+	<div class="box">
+		<h2>小米手机5</h2>
+		<h3>十余项黑科技，很轻狠快</h3>
+		骁龙820处理器，最大可选 4GB 内存 + 128GB 闪存 
+4 轴防抖相机，3D陶瓷 / 玻璃机身<br>
+<strong>1999</strong>元起
+	</div>
+</div>
+
+<div class="section" id="section1">
+	<div class="wrap">
+		<div class="imgsContainer">
+			<img src="image/1-1.png" alt="小米" id="gold-2" />
+		 <img src="image/3.png" alt="小米" id="gold-1" /> 
+			<img src="image/8-1.png" alt="小米" id="all-1" />
+		</div>
+		
+		<div class="box">
+			<h3>16颗灯省电高亮屏幕鲜艳通透</h3>
+			 <strong>闪耀你的眼</strong> <br>
+			  屏幕深度定制，在仅有 5.15" 屏幕上精密排布 16 颗 LED 灯珠，亮度提升 30%，色彩依旧鲜艳。灯光下看起来更通透，阳光下看得更清晰，这才是好屏幕应有的亮度。
+		</div>
+	</div>
+</div>
+
+<div class="section moveDown" id="section2">
+	<div class="wrap">
+		<div class="imgsContainer">
+			<img src="image/5.png" alt="小米" id="black-1" />
+			<img src="image/9.png" alt="小米" id="black-2" />
+			<img src="image/7-1.png" alt="小米" id="white-1" />
+		</div>
+		
+		<div class="box">
+			<h2>Its crazing</h2>
+			  <strong>探索黑科技，小米为发烧而生</strong><br>
+			   我们热爱这个时代，正因昨日的探索，今天便成为你手中的科技。探索更快、探索更清晰、探索更明亮、探索更好握感，
+如果你爱这个时代的日新月异，你一定也会爱上与你一起探索的全新小米5。 
+		</div>
+	</div>
+</div>
+<div class="section moveDown" id="section3">
+	<div class="wrap">
+		<div class="box">
+			<h2>爱你所爱，1.7亿 用户的新惊喜</h2>
+			好看、好用的 MIUI 系统，在小米5 上有了新惊喜。离线一键换机、
+手机远程锁定防丢失，还有美颜视频电话等有趣的新玩法。小米5是黑科技的代表作之一，配备高通年度旗舰处理器，探索更快内存、新一代闪存、下一代网络，还有相机、显示技术的重大提升，更不用说凝聚众多科技却仅有 129g 的超轻手感了。
+
+		</div>
+	</div>
+	<div class="imgsContainer">
+		<!-- <img src="image/2-2.png" alt="小米" id="gold" /> -->
+		<img src="image/2-3.png" alt="小米" id="black">
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<a href="http://www.dowebok.com/" style="display: none;">dowebok</a>
+<a href="http://www.dowebok.com/77.html" style="display: none;">jQuery全屏滚动插件fullPage.js</a>
+<script src="http://hm.baidu.com/h.js?988268596e7a833ffbfb2e9f82d93e18"></script>
+
+</body>
+</html>
